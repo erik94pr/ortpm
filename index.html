@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM – Överarm | Ortopediska frakturer</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f2eb;--bg-card:#fffef9;--border:#d6cfc0;--accent:#1a3a5c;--accent2:#c0392b;--accent3:#2e7d52;--text:#1c1a18;--text-muted:#6b6459;--warning-bg:#fff8e1;--warning-border:#e8a800;--mono:'IBM Plex Mono',monospace;--serif:'Libre Baskerville',serif;--sans:'Source Sans 3',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.7}
+header{background:var(--accent);color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.hi{max-width:1100px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:20px}
+.hl{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;opacity:.6;border-right:1px solid rgba(255,255,255,.3);padding-right:20px}
+header h1{font-family:var(--serif);font-size:1.45rem;font-weight:700}
+.hs{margin-left:auto;font-family:var(--mono);font-size:10px;opacity:.5}
+.pw{max-width:1100px;margin:0 auto;padding:32px 32px 80px;display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:start}
+.sb{position:sticky;top:72px}
+.st{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);padding-bottom:8px;border-bottom:2px solid var(--accent);margin-bottom:12px}
+.fn{list-style:none}
+.fn li{border-bottom:1px solid var(--border)}
+.fn button{width:100%;text-align:left;background:none;border:none;padding:11px 14px;cursor:pointer;font-family:var(--sans);font-size:13.5px;color:var(--text);display:flex;align-items:center;gap:10px;transition:background .15s,color .15s;border-radius:4px}
+.fn button:hover{background:#e8e2d8}
+.fn button.active{background:var(--accent);color:#fff;font-weight:600}
+.nn{font-family:var(--mono);font-size:10px;opacity:.5;min-width:18px}
+.fn button.active .nn{opacity:.7}
+.pp{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:36px 40px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.ph{border-bottom:2px solid var(--accent);padding-bottom:16px;margin-bottom:28px}
+.pc{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
+.pt{font-family:var(--serif);font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1.2}
+.ps{font-size:13px;color:var(--text-muted);margin-top:6px;font-style:italic;font-family:var(--serif)}
+.ms{margin-bottom:28px}
+.mt{font-family:var(--mono);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.mt::after{content:'';flex:1;height:1px;background:var(--border)}
+.ms p,.ms li{font-size:14.5px;line-height:1.75}
+.ms ul{padding-left:20px;margin-top:4px}
+.ms li{margin-bottom:3px}
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+.tb{border:1px solid var(--border);border-radius:5px;padding:14px 16px;background:var(--bg)}
+.tb.p{border-left:4px solid var(--accent3)}
+.tb.s{border-left:4px solid var(--accent)}
+.tb.c{border-left:4px solid var(--accent2)}
+.tb h4{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;color:var(--text-muted)}
+.tb ul{list-style:none;padding:0;margin:0}
+.tb li{font-size:13.5px;padding:3px 0 3px 14px;position:relative}
+.tb li::before{content:'→';position:absolute;left:0;opacity:.4;font-size:11px}
+.er{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.eb{display:inline-flex;align-items:center;border-radius:3px;padding:3px 9px;font-family:var(--mono);font-size:11px;font-weight:600}
+.ea{background:#d4edda;color:#2e7d52;border:1px solid #a3d4b0}
+.eb2{background:#dce8fa;color:#1565c0;border:1px solid #a0beec}
+.ec{background:#fde8d8;color:#e65100;border:1px solid #f0b88a}
+.eg{background:#f0e8eb;color:#6a1520;border:1px solid #d8a8b0}
+.eg2{background:var(--warning-bg);border:1px solid var(--warning-border);border-left:4px solid var(--warning-border);border-radius:4px;padding:12px 16px;margin-top:16px;font-size:13.5px}
+.eg2 strong{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:4px;color:#7a5800}
+sup{font-size:10px;color:var(--accent);font-weight:700}
+.rf{margin-top:24px;padding-top:18px;border-top:2px solid var(--border)}
+.rt{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}
+.rl{list-style:none;counter-reset:rc;padding:0}
+.rl li{counter-increment:rc;font-size:12px;color:var(--text-muted);line-height:1.5;margin-bottom:6px;padding-left:24px;position:relative}
+.rl li::before{content:counter(rc)'.';position:absolute;left:0;font-family:var(--mono);font-size:10px;top:1px;color:var(--accent);font-weight:600}
+.ct{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+.ct th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);border-bottom:2px solid var(--border);padding:6px 10px;background:var(--bg)}
+.ct td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+.ct tr:last-child td{border-bottom:none}
+.ct tr:hover td{background:#f0ebe0}
+.ip{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:32px 40px;text-align:center;color:var(--text-muted)}
+.ip h2{font-family:var(--serif);font-size:1.3rem;color:var(--accent);margin-bottom:12px}
+.ip p{max-width:480px;margin:0 auto;font-size:14px;line-height:1.7}
+.ia{font-size:28px;margin-bottom:12px;color:var(--border)}
+@media(max-width:768px){.pw{grid-template-columns:1fr}.sb{position:static}.pp{padding:24px 20px}.tg{grid-template-columns:1fr}.hi{padding:12px 16px}.pw{padding:16px 16px 60px}}
+</style>
+</head>
+<body>
+<header><div class="hi"><div class="hl">Ortopedi &middot; PM</div><h1>Överarm &ndash; Frakturer &amp; Skador</h1><div class="hs">Evidensbaserat &middot; RCT/Meta-analys prioriterat</div></div></header>
+<div class="pw">
+<aside class="sb">
+<div class="st">Frakturer / Skador</div>
+<ul class="fn">
+<li><button onclick="show('proximal')" id="nav-proximal"><span class="nn">01</span>Proximal humerusfraktur</button></li>
+<li><button onclick="show('shaft')" id="nav-shaft"><span class="nn">02</span>Humerusskaftfraktur</button></li>
+<li><button onclick="show('distal')" id="nav-distal"><span class="nn">03</span>Distal humerusfraktur</button></li>
+<li><button onclick="show('greater')" id="nav-greater"><span class="nn">04</span>Tuberculum majus-fraktur</button></li>
+<li><button onclick="show('lesser')" id="nav-lesser"><span class="nn">05</span>Tuberculum minus-fraktur</button></li>
+<li><button onclick="show('head')" id="nav-head"><span class="nn">06</span>Caput humeri-fraktur</button></li>
+<li><button onclick="show('neck')" id="nav-neck"><span class="nn">07</span>Collum chirurgicum-fraktur</button></li>
+<li><button onclick="show('epiphysis')" id="nav-epiphysis"><span class="nn">08</span>Epifysfraktur proximal (barn)</button></li>
+<li><button onclick="show('condyle')" id="nav-condyle"><span class="nn">09</span>Lateral kondylfraktur (barn)</button></li>
+<li><button onclick="show('supracondylar')" id="nav-supracondylar"><span class="nn">10</span>Suprakondylär fraktur (barn)</button></li>
+<li><button onclick="show('avulsion')" id="nav-avulsion"><span class="nn">11</span>Medial epikondyl avulsion (barn)</button></li>
+<li><button onclick="show('pathological')" id="nav-pathological"><span class="nn">12</span>Patologisk fraktur</button></li>
+</ul>
+</aside>
+<main id="main">
+<div class="ip"><div class="ia">&larr;</div><h2>Välj en fraktur i listan</h2><p>Välj en fraktur från navigationen till vänster för att visa behandlings-PM baserat på aktuellt vetenskapligt underlag.</p></div>
+</main>
+</div>
+<script>
+const D={
+
+proximal:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Proximal</div><div class="pt">Proximal humerusfraktur</div><div class="ps">Neer 1&ndash;4 delsfraktur. AO/OTA 11-A/B/C. Inkl. caput, collum anatomicum, Tb. majus och Tb. minus.</div></div>
+<div class="ms"><div class="mt">Klassifikation</div><p>Neer-klassifikation (1&ndash;4 delar, dislokation &gt;1 cm / &gt;45&deg;). AO/OTA 11-A/B/C används i forskning.<sup>[5]</sup></p></div>
+<div class="ms"><div class="mt">Epidemiologi</div><p>Ca 5&ndash;10&nbsp;% av alla frakturer, tredje vanligaste skörhetsfraktur.<sup>[1]</sup> Ca 85&nbsp;% kan handläggas konservativt.<sup>[3]</sup> Trend mot fler operationer trots otillräcklig evidens.<sup>[7]</sup></p></div>
+<div class="ms"><div class="mt">Behandling</div><div class="tg">
+<div class="tb p"><h4>Konservativ &ndash; förstahandsval (~85&nbsp;%)</h4><ul>
+<li>Mitella/arm sling 3&ndash;4 veckor<sup>[1,3]</sup></li>
+<li>Tidig pendulation vecka 1&ndash;2</li>
+<li>Odislocerade 1&ndash; och 2-delsfrakturer</li>
+<li>Äldre frail-patienter oavsett displacement<sup>[2]</sup></li>
+</ul></div>
+<div class="tb c"><h4>Kirurgisk &ndash; selektiva indikationer</h4><ul>
+<li>ORIF låsplatta (yngre, 3&ndash;4 delar)<sup>[4,6]</sup></li>
+<li>IMN (alternativ vid skaft-/caputfraktur)</li>
+<li>HA (hemiarthroplastik, äldre &gt;75 år)<sup>[6]</sup></li>
+<li>RTSA (reversprotes, äldre, osteoporos, RC-defekt)<sup>[4,6]</sup></li>
+<li>Absoluta: öppen fraktur, frakturdislokation, head-splitting<sup>[3]</sup></li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb ea">Nivå I &ndash; RCT (PROFHER)</span><span class="eb ea">Cochrane 2022</span><span class="eb ea">Nätverks-MA 2024</span></div><br>
+<p><strong>PROFHER<sup>[1]</sup></strong> (UK multicentre RCT, n=250): Ingen signifikant skillnad i Oxford Shoulder Score vid 2 år mellan konservativ och kirurgisk behandling. Stödjer konservativ förstahandsbehandling.</p><br>
+<p><strong>Murray et al.<sup>[2]</sup></strong> (meta-analys, 7 RCT, n=528): Ingen övergripande skillnad. Subgruppsanalys visade förbättrat utfall efter kirurgi vid 3&ndash;4-delsfrakturer.</p><br>
+<p><strong>Cochrane 2022<sup>[5]</sup></strong> (Handoll et al.): Otillräcklig säkerhet för att förespråka kirurgi framför konservativ behandling vid de flesta PHF.</p><br>
+<p><strong>Nätverksmeta-analys BMC 2024<sup>[4]</sup></strong>: RTSA rankades högst för funktionellt utfall och lägst för malunion/AVN vid komplexa frakturer, med begränsad tillförlitlighet.<sup>[6]</sup></p><br>
+<p><strong>Rehabilitering<sup>[7]</sup></strong> (systematisk översikt, n=3507): Stor variation i rehabiliteringsprotokoll &ndash; konsensus saknas.</p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Inget tillförlitligt RCT för optimalt val HA vs RTSA hos äldre med 4-delsfraktur. Rehabiliteringsprotokoll saknar konsensus. Nätverksmeta-analyser är metodologiskt osäkra.<sup>[6]</sup></div></div>
+<div class="ms"><div class="mt">Uppföljning</div><ul>
+<li>Röntgen v. 1, v. 6, v. 12 (konservativ); per klinik vid kirurgi</li>
+<li>Sjukgymnastik: pendulation tidigt &rarr; aktiv ROM v. 4&ndash;6 &rarr; styrketräning v. 8&ndash;12</li>
+<li>Kontrollera AVN (risk vid 4-dels + dislokationsfraktur)</li>
+</ul></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Rangan A, et al. (PROFHER). Surgical vs nonsurgical treatment of displaced proximal humerus fractures. JAMA 2015;313(10):1037&ndash;1047.</li>
+<li>Murray IR, et al. Meta-analysis RCTs surgical vs non-surgical PHF (7 RCT, n=528). PMC 2016.</li>
+<li>Iyengar JJ, et al. Nonoperative treatment of proximal humerus fractures: systematic review. J Orthop Trauma 2011;25:612&ndash;617.</li>
+<li>Zheng Y, Tang N, Zhang WJ, et al. Comparative efficacy: network meta-analysis PHF treatments. BMC Musculoskelet Disord 2024;25:17.</li>
+<li>Handoll HH, Elliott J, Thillemann TM, et al. Interventions for treating proximal humeral fractures in adults. Cochrane Database Syst Rev 2022;6:CD000434.</li>
+<li>Stortecky S, et al. Transitivity, coherence, reliability of network meta-analyses PHF treatments. BMC Musculoskelet Disord 2024.</li>
+<li>Budharaju A, Hones KM, Hao KA, et al. Rehabilitation protocols in PHF management: systematic review (n=3507). J Shoulder Elbow Surg 2024.</li>
+</ol></div></div>`,
+
+shaft:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Diafys</div><div class="pt">Humerusskaftfraktur</div><div class="ps">AO/OTA 12-A/B/C. Utgör 1&ndash;5&nbsp;% av alla frakturer hos vuxna. Holstein-Lewis-fraktur: distal spiral med radialisrisk.</div></div>
+<div class="ms"><div class="mt">Klassifikation (AO/OTA)</div><table class="ct"><thead><tr><th>Typ</th><th>Beskrivning</th></tr></thead><tbody>
+<tr><td>12-A</td><td>Enkel (transvers, spiral, sned)</td></tr>
+<tr><td>12-B</td><td>Kil (butterfly, spiralkil)</td></tr>
+<tr><td>12-C</td><td>Komplex / komminut</td></tr></tbody></table></div>
+<div class="ms"><div class="mt">Behandling</div><div class="tg">
+<div class="tb p"><h4>Konservativ &ndash; förstahandsval</h4><ul>
+<li>Sarmiento funktionell brace v. 1&ndash;2<sup>[1,2]</sup></li>
+<li>Initial mitella/hanging cast 1&ndash;2 v.</li>
+<li>Tidig axel/armbågsrörelse</li>
+<li>Acceptabelt: &lt;30&deg; angulering, &lt;3 cm förkortning</li>
+</ul></div>
+<div class="tb c"><h4>Kirurgisk &ndash; selektiva indikationer</h4><ul>
+<li>MIPO &ndash; bäst evidens<sup>[3,4]</sup></li>
+<li>ORIF kompressionsplatta</li>
+<li>IMN anterograd/retrograd<sup>[5]</sup></li>
+<li>Indikationer: polytrauma, öppen fraktur, vaskulär skada, bilateral, patologisk, nonunion<sup>[2]</sup></li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Radialisparaly</div><p>Primär radialisparaly (Holstein-Lewis, distalt spiral): expektera 8&ndash;12 veckor.<sup>[1]</sup> EMG vid utebliven återhämtning &gt;8&ndash;12 v. Iatrogen paraly vid plating: explorera. Permanent paraly lika vanlig konservativt och kirurgiskt.<sup>[2]</sup></p></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb ea">Meta-analys RCT+kohort</span><span class="eb ea">Nätverks-MA RCT 2023</span><span class="eb eb2">Syst. översikt 2023</span></div><br>
+<p><strong>van de Wall et al.<sup>[2]</sup></strong> (2 RCT + 10 kohortstudier, n=1412): Konservativ behandling signifikant högre nonunion (15.3&nbsp;% vs 6.4&nbsp;%, OR 2.9; 95&nbsp;% CI 1.8&ndash;4.5). Permanent radialispares skilde sig ej.</p><br>
+<p><strong>Schroeder et al.<sup>[3]</sup></strong> (nätverksmeta-analys av RCT, 2023): MIPO rankades bäst för nonunion. Brace acceptabelt vid enkla frakturer.</p><br>
+<p><strong>Dietz et al.<sup>[1]</sup></strong> (systematisk översikt, 2023): Alla metoder ger tillfredsställande funktion vid 1 år. Plattosteosyntés lätt fördelaktig i Constant-Murley, DASH och UCLA vs IMN.</p><br>
+<p><strong>Zhao et al.<sup>[5]</sup></strong> (nätverksmeta-analys av RCT, 2023): MIPO och ORIF jämförbara. Brace acceptabelt vid enkla frakturer.</p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Begränsat antal direkta RCT (~2&ndash;3 välgjorda). PROM-data saknas i majoriteten av studierna. Optimal timing konservativ &rarr; kirurgi vid nonunion ej studerad i RCT.</div></div>
+<div class="ms"><div class="mt">Uppföljning</div><ul>
+<li>Röntgen v. 2, 6, 12 &ndash; läkning 8&ndash;12 veckor</li>
+<li>Sarmiento-brace anpassas löpande</li>
+<li>CT vid utebliven läkning vid 3 månader</li>
+</ul></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Dietz S-O, et al. Humeral shaft fracture: systematic review. Arch Orthop Trauma Surg 2023;143:4231&ndash;4241.</li>
+<li>van de Wall BJM, Ochen Y, Beeres FJP, et al. Conservative vs operative treatment humeral shaft fractures: meta-analysis (2 RCT + 10 kohort, n=1412). J Shoulder Elbow Surg 2020;29(7):1493&ndash;1504.</li>
+<li>Schroeder L, et al. Conservative management with functional brace versus surgical: network meta-analysis of RCTs. J Bone Joint Surg Am 2023;105(12).</li>
+<li>Driesman AS, et al. Management of Humeral Shaft Fracture: network meta-analysis level I&ndash;II evidence. J Orthop Trauma 2024.</li>
+<li>Zhao J, et al. Treatment of humeral shaft fractures: network meta-analysis of RCTs. PMC 2023.</li>
+<li>Ekholm R, et al. Fractures of the shaft of the humerus: epidemiological study of 401 fractures. J Bone Joint Surg Br 2006;88(11):1469&ndash;1473.</li>
+</ol></div></div>`,
+
+distal:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Distal</div><div class="pt">Distal humerusfraktur</div><div class="ps">AO/OTA 13-A/B/C. Utmanande intraartikulär skada. Dubbel kolonnanatomin kräver komplex stabilisering.</div></div>
+<div class="ms"><div class="mt">Klassifikation (AO/OTA)</div><table class="ct"><thead><tr><th>Typ</th><th>Beskrivning</th></tr></thead><tbody>
+<tr><td>13-A</td><td>Extraartikulär (suprakondylär)</td></tr>
+<tr><td>13-B</td><td>Partiell ledinvolvering (lat/med kolonn, capitellum)</td></tr>
+<tr><td>13-C</td><td>Komplett intraartikulär &ndash; C1 enkel, C2 metafys, C3 komminut</td></tr></tbody></table></div>
+<div class="ms"><div class="mt">Behandling</div><div class="tg">
+<div class="tb c"><h4>ORIF &ndash; yngre/aktiva patienter</h4><ul>
+<li>Dubbel låsplatta (parallella plattor föredras)<sup>[1,2]</sup></li>
+<li>Olecranonsosteotomi för god exponering</li>
+<li>Tidig aktiv rörlighet dag 1&ndash;3 postop</li>
+<li>Anteriorisering n. ulnaris vid behov<sup>[1]</sup></li>
+</ul></div>
+<div class="tb s"><h4>TEA &ndash; äldre (&gt;65&ndash;70 år), osteoporos, C3</h4><ul>
+<li>Total armbågsprotes (TEA)<sup>[3,4,5]</sup></li>
+<li>Bättre ROM och lägre reoperation vs ORIF<sup>[3]</sup></li>
+<li>Livsstilsbegränsning: max lyft 1&ndash;2 kg permanent</li>
+<li>Kontraindikation: tung manuell yrkesaktivitet</li>
+</ul></div></div>
+<br><p><strong>Konservativ behandling</strong> reserveras för icke-operbara patienter. Sling + tidig rörelseträning.</p></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb ea">Meta-analys 2022</span><span class="eb eb2">1 RCT + kohorter</span><span class="eb eb2">Syst. översikt TEA 2025</span></div><br>
+<p><strong>Seok et al.<sup>[3]</sup></strong> (meta-analys, JCM 2022; 1 RCT + 9 retrospektiva): TEA signifikant bättre flexion/extension-båge (p=0.02), lägre reoperation (p=0.003), lägre styvhet (p=0.04) vs ORIF. Funktionsscore liknande i båda grupper.</p><br>
+<p><strong>McKee et al.<sup>[4]</sup></strong> (RCT, n=40/arm): TEA visade superior early function vs ORIF vid 2 år för typ C3 hos äldre.</p><br>
+<p><strong>Githens et al.<sup>[5]</sup></strong> (meta-analys, 2014): Liknande funktionsscore och ROM &ndash; trend mot fler komplikationer vid ORIF ej signifikant. Låg studiekvalitet.</p><br>
+<p><strong>SurgiColl 2025<sup>[2]</sup></strong> (systematisk översikt och meta-analys): TEA vid akut DHF ger acceptabla funktionella utfall i modern era men komplikationsfrekvens kvarstår som klinisk utmaning.</p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Endast ett välgjort RCT jämför TEA vs ORIF direkt. De flesta studier retrospektiva. Optimal åldersgräns ej fastlagd i RCT. Hantering av ulnarisneuropati perioperativt saknar RCT-stöd.</div></div>
+<div class="ms"><div class="mt">Komplikationer</div><ul>
+<li>Ulnarisnervpåverkan &ndash; anteriorisering vid behov<sup>[1]</sup></li>
+<li>Heterotop ossifikation (HO) &ndash; profylaktisk NSAID diskuteras</li>
+<li>Armbågsstyvhet &ndash; aggressiv tidig rörlighet minskar risk</li>
+<li>Implantatlösning/fraktur (TEA-specifikt, livslång risk)</li>
+</ul></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Gofton WT, MacDermid JC, Patterson SD, et al. Functional outcome of AO type C distal humeral fractures. J Hand Surg Am 2003;28(2):294&ndash;308.</li>
+<li>Total Elbow Arthroplasty for Distal Humerus Fractures &ndash; outcomes and complications: systematic review and meta-analysis. SurgiColl 2025.</li>
+<li>Seok HG, Park J-J, Park S-G. ORIF vs TEA distal humeral fractures elderly: systematic review and meta-analysis. J Clin Med 2022;11(19):5775.</li>
+<li>McKee MD, Veillette CJ, Hall JA, et al. Multicenter prospective RCT: ORIF vs TEA for intra-articular distal humeral fractures in elderly. J Shoulder Elbow Surg 2009;18(1):3&ndash;12.</li>
+<li>Githens M, Yao J, Sox AH, Bishop J. ORIF vs TEA geriatric distal humerus fractures: meta-analysis. J Orthop Trauma 2014;28(8):481&ndash;488.</li>
+<li>Jordan RW, Saithna A, Kimani P, et al. TEA vs plate fixation distal humeral fractures elderly: systematic review and meta-analysis. Curr Orthop Pract 2018;29:384&ndash;399.</li>
+</ol></div></div>`,
+
+greater:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Proximal &ndash; Tuberositet</div><div class="pt">Tuberculum majus-fraktur</div><div class="ps">Isolerad fraktur av Tb. majus. 14&ndash;20&nbsp;% av PHF. Fästpunkt för supra/infraspinatus och teres minor.</div></div>
+<div class="ms"><div class="mt">Bakgrund</div><p>Uppstår vid direkttrauma eller anteriort luxationstrauma (30&ndash;40&nbsp;% av anteriora luxationer).<sup>[3]</sup> Displacement &gt;5 mm kan störa rotatorkuffens biomekanik och ge subakromial impingement.<sup>[4]</sup> Sekundärt kirurgibehov hos 16&nbsp;% initialt konservativt behandlade, primärt pga mjukdelsskador (rotatorkuff), ej sekundär dislokation.<sup>[5]</sup></p></div>
+<div class="ms"><div class="mt">Behandlingsprincip</div><div class="tg">
+<div class="tb p"><h4>Konservativ (&le;5 mm displacement)</h4><ul>
+<li>Mitella 3&ndash;4 veckor<sup>[1,2]</sup></li>
+<li>Tidig pendulation</li>
+<li>Aktiv träning v. 4&ndash;6</li>
+<li>MRT vid misstanke om rotatorkuffskada</li>
+</ul></div>
+<div class="tb c"><h4>Kirurgisk (&gt;5 mm; &gt;3 mm hos aktiva)</h4><ul>
+<li>ORIF med skruv eller suturankar<sup>[1,2]</sup></li>
+<li>Artroskopisk suture-bridge teknik<sup>[6]</sup></li>
+<li>Reparera rotatorkuff om ruptur föreligger</li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb ec">Nivå III&ndash;IV &ndash; Retrospektiva kohorter</span><span class="eb eb2">Syst. översikt kirurgiska utfall</span><span class="eb eg">Inga RCT</span></div><br>
+<p><strong>Systematisk översikt (kirurgiska utfall)<sup>[6]</sup></strong> (345 patienter, 16 studier): Tillfredsställande funktion och arbetsåtergång (93&nbsp;%) oavsett metod. Komplikationsfrekvens 15&nbsp;%. Ingen signifikant skillnad artroskopisk vs öppen teknik.</p><br>
+<p><strong>Platzer et al.<sup>[1]</sup></strong> (n=61): Signifikant bättre funktionsresultat efter ORIF vid &gt;5 mm vs konservativt.</p><br>
+<p><strong>Mutch et al.<sup>[2]</sup></strong> (n=30, 3 år): Goda konservativa resultat (DASH 13, CS 71) vid &le;5 mm.</p><br>
+<p><strong>Biomekanikstudie<sup>[4]</sup></strong>: 5 mm superior displacement ökar abduktionskraft 16&ndash;27&nbsp;% &ndash; kan ge subakromial impingement.</p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Inga RCT för isolerad Tb. majus-fraktur. Displacementsgräns (3 vs 5 mm) ej klarlagd i prospektiva studier. Behandling baseras på observationsstudier och biomekanisk data.</div></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Platzer P, Kutscha-Lissberg F, Lehr S, et al. Influence of displacement on shoulder function in greater tuberosity fractures. J Trauma 2008;65(4):843&ndash;848.</li>
+<li>Mutch J, Laflamme GY, Hagemeister N, et al. New morphological classification for greater tuberosity fractures. Bone Joint J 2014;96-B(5):646&ndash;651.</li>
+<li>Gallo RA, Sciulli R, Daffner RH, et al. Relationship between rotator cuff injury and proximal humerus fractures. Clin Orthop Relat Res 2007;458:70&ndash;77.</li>
+<li>Yin B, Moen TC, Dines DM, et al. Biomechanical consequences of greater tuberosity displacement. J Shoulder Elbow Surg 2013;22(2):214&ndash;220.</li>
+<li>Kirchhoff C, Braunstein V, et al. Isolated fractures of greater tuberosity: when are they treated conservatively? Obere Extrem 2018 (PMC5976706).</li>
+<li>Liao W, Zhang H, Li Z, et al. Arthroscopic vs open ORIF for displaced greater tuberosity fractures: systematic review. Clin Orthop Relat Res 2016;474(5):1269&ndash;1279.</li>
+</ol></div></div>`,
+
+lesser:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Proximal &ndash; Tuberositet</div><div class="pt">Tuberculum minus-fraktur</div><div class="ps">Sällsynt isolerad fraktur. Ses vid posteriora luxationer, epileptiska anfall och högenergiskador. M. subscapularis fäster här.</div></div>
+<div class="ms"><div class="mt">Bakgrund</div><p>Tb. minus-fraktur uppstår vanligen vid posteriort luxationstrauma<sup>[1]</sup> eller som del av komplexa PHF. Isolerad fraktur sällsynt &ndash; ses vid epilepsi och elolycka.<sup>[2]</sup> M. subscapularis ansvarar för intern rotation och anteriorstabilitet.<sup>[5]</sup></p></div>
+<div class="ms"><div class="mt">Behandlingsprincip</div><div class="tg">
+<div class="tb p"><h4>Konservativ (liten, odislocerad)</h4><ul>
+<li>Mitella 3&ndash;4 v., undvika extern rotation<sup>[1]</sup></li>
+<li>Sjukgymnastik tidig intern rotation</li>
+</ul></div>
+<div class="tb c"><h4>Kirurgisk (dislocerad, subscapularisdysfunktion)</h4><ul>
+<li>ORIF med skruv eller suturankar<sup>[2,3]</sup></li>
+<li>Reparation subscapularis</li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb ec">Nivå IV &ndash; Fallserier</span><span class="eb eg">Inga RCT</span></div><br>
+<p>Isolerad Tb. minus-fraktur är för sällsynt för kontrollerade studier. All litteratur utgörs av fallrapporter och retrospektiva fallserier.<sup>[1,2,3,4]</sup> Behandlingsprinciper baseras på analogi med subscapularisanatomin.<sup>[5]</sup></p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Inga RCT, meta-analyser eller prospektiva kohortstudier. All rekommendation baseras på fallrapporter och extrapolering.</div></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Robinson CM, Akhtar A, Mitchell M, Beavis C. Complex posterior fracture-dislocation of the shoulder. J Bone Joint Surg Am 2007;89(7):1454&ndash;1466.</li>
+<li>Ogawa K, Takahashi M. Long-term outcome of isolated lesser tuberosity fractures. J Trauma 1997;42(5):955&ndash;959.</li>
+<li>Scheibel M, Martinek V, Imhoff AB. Arthroscopic reconstruction of avulsion fracture of lesser tuberosity. Arthroscopy 2005;21(4):487&ndash;494.</li>
+<li>Jaksic K, et al. Isolated lesser tuberosity fracture treated by ORIF: case report. Int J Surg Case Rep 2022.</li>
+<li>Gerber C, Krushell RJ. Isolated rupture of the tendon of the subscapularis muscle. J Bone Joint Surg Br 1991;73(3):389&ndash;394.</li>
+</ol></div></div>`,
+
+head:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Proximal &ndash; Huvud</div><div class="pt">Caput humeri-fraktur (head-splitting)</div><div class="ps">Komminut fraktur av ledhuvudet. Hög AVN-risk. Inkl. Hill-Sachs-lesion och impressionsfraktur vid bakre luxation.</div></div>
+<div class="ms"><div class="mt">Bakgrund</div><p>Innebär uppdelning av ledhuvudet med AVN-risk 25&ndash;75&nbsp;%.<sup>[1]</sup> Hill-Sachs-lesion: osteokondral defekt posteriort vid anteriort luxationstrauma.<sup>[3]</sup> Impressionsfraktur anteriort vid posteriora luxationer.<sup>[2]</sup></p></div>
+<div class="ms"><div class="mt">Behandlingsprincip</div><div class="tg">
+<div class="tb c"><h4>Yngre patienter</h4><ul>
+<li>Rekonstruktion om möjligt &ndash; ORIF<sup>[1]</sup></li>
+<li>Remplissage vid Hill-Sachs &gt;25&nbsp;% av ledyta<sup>[3]</sup></li>
+<li>Autologt bentransplantat vid stora defekter<sup>[4]</sup></li>
+</ul></div>
+<div class="tb s"><h4>Äldre / Komminut</h4><ul>
+<li>HA om rotatorkuff intakt<sup>[1]</sup></li>
+<li>RTSA vid rotatorkuffdefekt/osteoporos<sup>[5]</sup></li>
+<li>Operera inom 48&ndash;72 h om möjligt (AVN-risk)<sup>[6]</sup></li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb ec">Nivå III&ndash;IV &ndash; Fallserier / kohorter</span><span class="eb eg">Inga RCT</span></div><br>
+<p>Head-splitting fractures ingår i PHF-studier som subgrupp men saknar egna RCT. Val rekonstruktion vs protes styrs av benstock, ålder och erfarenhet.<sup>[1,5]</sup> AVN-risk korrelerar med tid till kirurgi och graden av mjukdelsavlösning.<sup>[6]</sup> Remplissage stöds av RCT för Hill-Sachs vid instabilitet.<sup>[3]</sup></p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Inga RCT specifikt för head-splitting fractures. Rekonstruktion vs protes styrs av konsensus och erfarenhet. AVN-incidens och optimal timing saknar prospektiva RCT.</div></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Schnetzke M, Bockmeyer J, Loew M, et al. Rate of AVN after fracture-dislocations proximal humerus: timing of surgery. Obere Extrem 2018;13:273&ndash;278.</li>
+<li>Robinson CM, Akhtar A, Mitchell M, Beavis C. Complex posterior fracture-dislocation of the shoulder. J Bone Joint Surg Am 2007;89(7):1454&ndash;1466.</li>
+<li>Boileau P, O'Shea K, Vargas P, et al. Anatomical and functional results after arthroscopic Hill-Sachs remplissage. J Bone Joint Surg Am 2012;94(7):618&ndash;626.</li>
+<li>Latarjet M. Treatment of recurrent dislocation of the shoulder. Lyon Chir 1954;49:994&ndash;1003.</li>
+<li>Boileau P, Watkinson DJ, Hatzidakis AM, et al. Grammont reverse prosthesis: design, rationale, and biomechanics. J Shoulder Elbow Surg 2005;14(1 Suppl):147&ndash;161.</li>
+<li>Brooks CH, Revell WJ, Heatley FW. Vascularity of humeral head after proximal humeral fractures. J Bone Joint Surg Br 1993;75(1):132&ndash;136.</li>
+</ol></div></div>`,
+neck:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Proximal &ndash; Collum</div><div class="pt">Collum chirurgicum-fraktur</div><div class="ps">Vanligaste delfrakturen vid PHF hos äldre. Ingår i Neer 2-dels vid dislokation. Axillärnerv löper nära.</div></div>
+<div class="ms"><div class="mt">Bakgrund</div><p>Vanligaste subtypen av PHF och handläggs i stor utsträckning konservativt.<sup>[1,2]</sup> Behandlingsprinciperna följer den övergripande PHF-evidensen. Axillärnerv kontrolleras neurovaskulärt vid displacement.<sup>[5]</sup></p></div>
+<div class="ms"><div class="mt">Behandling</div><div class="tg">
+<div class="tb p"><h4>Konservativ (odislocerad, äldre)</h4><ul>
+<li>Mitella 3&ndash;4 veckor<sup>[1,2]</sup></li>
+<li>Tidig rörlighet, pendulation</li>
+<li>Sjukgymnastik v. 2&ndash;4</li>
+</ul></div>
+<div class="tb c"><h4>Kirurgisk (dislocerad, yngre)</h4><ul>
+<li>ORIF med låsplatta eller IMN<sup>[3,4]</sup></li>
+<li>Perkutan fixation (äldre, enkla 2-delsfrakturer)<sup>[3]</sup></li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb ea">Ingår i PHF-RCT (PROFHER, Olerud m.fl.)</span></div><br>
+<p>Collum chirurgicum-frakturer ingår i samtliga stora PHF-RCT inklusive PROFHER<sup>[1]</sup>, Olerud et al.<sup>[3]</sup> och Cochrane-översikten.<sup>[2]</sup> Isolerade RCT för enbart denna subtyp saknas.</p><br>
+<p><strong>Olerud et al. RCT<sup>[3]</sup></strong> (n=60, 2-delsfrakturer): Låsplatta förbättrat OSSscore vid 1 år vs konservativt hos 55&ndash;75 år, men hög komplikationsrate (36&nbsp;% plattrelaterade komplikationer).</p><br>
+<p><strong>Konrad et al. RCT<sup>[4]</sup></strong>: Låsplatta vs IMN &ndash; liknande utfall för de två kirurgiska teknikerna.</p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Isolerade RCT för enbart collum chirurgicum saknas. Subgruppsdata blandas med andra Neer-typer. Optimal behandling vid t.ex. valgus-impacted subtyp ej klarlagd.</div></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Rangan A, et al. (PROFHER). Surgical vs nonsurgical treatment of displaced proximal humerus fractures. JAMA 2015;313(10):1037&ndash;1047.</li>
+<li>Handoll HH, Elliott J, Thillemann TM, et al. Cochrane review PHF adults. Cochrane Database Syst Rev 2022;6:CD000434.</li>
+<li>Olerud P, Ahrengart L, Ponzer S, et al. Internal fixation vs nonoperative treatment 2-part proximal humerus fractures elderly: RCT. J Bone Joint Surg Am 2011;93(17):1590&ndash;1599.</li>
+<li>Konrad G, Audige L, Lambert S, et al. Similar outcomes nail vs plate fixation proximal humerus fractures: RCT. Clin Orthop Relat Res 2012;470(2):602&ndash;609.</li>
+<li>Visser CP, Coene LN, Brand R, Tavy DL. Incidence of nerve injury in anterior dislocation of the shoulder. J Bone Joint Surg Br 1999;81(4):679&ndash;685.</li>
+</ol></div></div>`,
+
+epiphysis:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Proximal &ndash; Pediatrik</div><div class="pt">Proximal humerus epifysfraktur (barn)</div><div class="ps">Salter-Harris klassificerad tillväxtzonsfraktur. Stor remodellieringskapacitet hos barn &lt;12 år. Proximala fysen = 80&nbsp;% av humerustillväxt.</div></div>
+<div class="ms"><div class="mt">Klassifikation &ndash; Salter-Harris</div><table class="ct"><thead><tr><th>SH-typ</th><th>Morfologi</th><th>Behandling</th></tr></thead><tbody>
+<tr><td>I</td><td>Enbart genom fysen</td><td>Konservativ</td></tr>
+<tr><td>II (vanligast)</td><td>Fysen + metafysärt fragment</td><td>Konservativ (acceptabel angulering)</td></tr>
+<tr><td>III</td><td>Fysen + epifysärt fragment</td><td>ORIF om dislocerad</td></tr>
+<tr><td>IV</td><td>Fysen + metafys + epifys</td><td>ORIF</td></tr></tbody></table></div>
+<div class="ms"><div class="mt">Acceptabel angulering</div><ul>
+<li>&lt;5 år: upp till 70&deg;<sup>[1,2]</sup></li>
+<li>5&ndash;12 år: upp till 40&ndash;60&deg;</li>
+<li>&gt;12 år: &lt;20&ndash;30&deg; &ndash; remodellering begränsad</li>
+</ul></div>
+<div class="ms"><div class="mt">Behandling</div><div class="tg">
+<div class="tb p"><h4>Konservativ</h4><ul>
+<li>Mitella eller Velpeau 3&ndash;4 v.<sup>[1,2]</sup></li>
+<li>Remodellering stor hos yngre</li>
+<li>Röntgenkontroll v. 1 och v. 3</li>
+</ul></div>
+<div class="tb c"><h4>Kirurgisk</h4><ul>
+<li>Perkutana K-trådar (SH III&ndash;IV, angulering &gt;gräns)<sup>[3,4]</sup></li>
+<li>Undvik öppen kirurgi &ndash; AVN-risk</li>
+<li>Sluten reposition i narkos förstaval</li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb ec">Nivå III&ndash;IV &ndash; Retrospektiva serier</span><span class="eb eg">Inga RCT</span></div><br>
+<p>RCT saknas helt. Alla behandlingsrekommendationer baseras på retrospektiva kohortstudier och expertopinion.<sup>[1,2,3]</sup> Exakta anguleringsgränser är konsensusbaserade, inte prospektivt validerade.<sup>[4,5]</sup></p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Inga RCT. Anguleringsgränser ej validerade i prospektiva studier. Långtidsdata avseende tillväxtstörning och funktion begränsade.</div></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Beringer DC, Weiner DS, Noble JS, et al. Severely displaced proximal humeral epiphyseal fractures: follow-up study. J Pediatr Orthop 1998;18(1):31&ndash;37.</li>
+<li>Landin LA, Danielsson LG. Elbow fractures in children: epidemiological analysis of 589 cases. Acta Orthop Scand 1986;57(4):309&ndash;312.</li>
+<li>Neer CS, Horwitz BS. Fractures of proximal humeral epiphysial plate. Clin Orthop Relat Res 1965;41:24&ndash;31.</li>
+<li>Ersen A, Dogramaci Y, Demirkale I, et al. Remodeling capacity of proximal humerus fractures in children. Acta Orthop Traumatol Turc 2017;51(4):294&ndash;298.</li>
+<li>Bahk MS, Kuhn JE, Galatz LM, et al. Acromioclavicular and sternoclavicular injuries and clavicular fractures. J Bone Joint Surg Am 2009;91(10):2492&ndash;2510.</li>
+</ol></div></div>`,
+
+condyle:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Distal &ndash; Pediatrik</div><div class="pt">Lateral kondylfraktur (barn)</div><div class="ps">Salter-Harris IV-fraktur. Näst vanligaste barnfraktur i armbågen (12&ndash;20&nbsp;%). Ålder 4&ndash;10 år. Risk för nonunion och fiskfenasdeformitet.</div></div>
+<div class="ms"><div class="mt">Klassifikation (Milch / Jakob)</div><table class="ct"><thead><tr><th>Grad</th><th>Displacement</th><th>Behandling</th></tr></thead><tbody>
+<tr><td>I / Stabil (&lt;2 mm)</td><td>Minimal, intakt ledbrosshängsla</td><td>Gips + tät röntgenkontroll v. 1</td></tr>
+<tr><td>II / Partiell (2&ndash;4 mm)</td><td>Partiell dislokation</td><td>CRPP eller konservativ</td></tr>
+<tr><td>III / Komplett (&gt;4 mm)</td><td>Roterad/komplett dislokation</td><td>ORIF + K-trådar</td></tr></tbody></table></div>
+<div class="ms"><div class="mt">Behandling</div><div class="tg">
+<div class="tb p"><h4>Konservativ (&lt;2 mm, stabil)</h4><ul>
+<li>Lång armgips 90&deg; flexion, 6 veckor<sup>[3,4]</sup></li>
+<li>Röntgen v. 1 + v. 3 &ndash; sekundär dislokation 15&nbsp;%<sup>[4]</sup></li>
+<li>Begär oblique-vy &ndash; AP underskattar displacement</li>
+</ul></div>
+<div class="tb c"><h4>Kirurgisk (&gt;2 mm / instabil)</h4><ul>
+<li>CRPP (Jakob II): perkutan fixation om reduktionsbar<sup>[1,5]</sup></li>
+<li>ORIF (Jakob III): öppen reposition + K-trådar<sup>[2,5]</sup></li>
+<li>Trådar kvar 4&ndash;6 v.; union-kontroll</li>
+<li>Noggrann mjukdelshantering &ndash; AVN-risk</li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb eb2">Meta-analys CRPP vs ORIF 2023</span><span class="eb eb2">Syst. översikt ORIF 2022</span><span class="eb ec">RCT (prospektivt, 2022)</span></div><br>
+<p><strong>Liu et al.<sup>[1]</sup></strong> (meta-analys, Springer 2023, 742 patienter, 8 studier): Ingen signifikant skillnad infektion, AVN eller nonunion mellan CRPP och ORIF (p&gt;0.05).</p><br>
+<p><strong>Eckhoff et al.<sup>[2]</sup></strong> (systematisk översikt ORIF, 1299 patienter, 13 studier): Liknande union- och infektionsfrekvens. Unburied K-wires kortare läkningstid och bättre ROM.</p><br>
+<p><strong>Chen et al.<sup>[5]</sup></strong> (prospektivt RCT, 2022): Perkutan fixation vs ORIF &ndash; jämförbara utfall.</p><br>
+<p><strong>Knapik et al.<sup>[4]</sup></strong> (systematisk översikt, &le;2 mm, 6 studier): Sekundär dislokation 14.9&nbsp;% &ndash; sker typiskt inom 3 veckor. Tät röntgenkontroll v. 1 avgörande.</p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Inga välgjorda RCT för konservativ vs kirurgisk behandling av 2 mm-gränsen. AVN-risk vid extensiv kirurgi ej kvantifierad prospektivt. Långtidskomplikationer saknar prospektiva prediktorer.</div></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Liu Y, et al. Open vs closed reduction internal fixation lateral condyle humeral fractures children: systematic review and meta-analysis (742 patienter). J Orthop Surg Res 2023;18(1). doi:10.1186/s13018-023-03808-3.</li>
+<li>Eckhoff MD, Tadlock JC, Nicholson TC, et al. Open reduction of pediatric lateral condyle fractures: systematic review (n=1299). PMC 2022.</li>
+<li>Marcheix PS, Vacquerie V, Longis B, et al. Distal humerus lateral condyle fracture in children: when is conservative treatment a valid option? Orthop Traumatol Surg Res 2011;97:304&ndash;307.</li>
+<li>Knapik DM, Gilmore A, Liu RW. Conservative management of minimally displaced (&le;2 mm) lateral humeral condyle fractures: systematic review. J Pediatr Orthop 2017;37:e83&ndash;e87.</li>
+<li>Chen Y, Li X, Zhang H, et al. Prospective randomized study: percutaneous pinning vs open reduction pediatric lateral condyle fractures. Int Orthop 2022;46(5):1135&ndash;1142.</li>
+<li>Ganeshalingam R, Donnan A, Evans O, et al. Lateral condyle fractures: does operative strategy affect outcomes? J Pediatr Orthop B 2022;31(3):239&ndash;245.</li>
+</ol></div></div>`,
+
+supracondylar:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Distal &ndash; Pediatrik</div><div class="pt">Suprakondylär humerusfraktur (barn)</div><div class="ps">Vanligaste barnfrakturen i armbågen (75&nbsp;% av pediatriska armbågsfrakturer). Gartland I&ndash;IV. Risk neurovaskulär skada. Drabbar 5&ndash;8 år.</div></div>
+<div class="ms"><div class="mt">Klassifikation (Gartland, modifierad)</div><table class="ct"><thead><tr><th>Grad</th><th>Displacement</th><th>Behandling</th></tr></thead><tbody>
+<tr><td>I</td><td>Odislocerad</td><td>Gips 90&deg; flexion, 3 veckor</td></tr>
+<tr><td>II</td><td>Dislocerad, posterior cortex intakt</td><td>Sluten reposition + laterala K-trådar</td></tr>
+<tr><td>III</td><td>Komplett dislokation</td><td>Akut sluten/öppen reposition + K-trådar</td></tr>
+<tr><td>IV (Leitch)</td><td>Multidirektionell instabilitet</td><td>ORIF</td></tr></tbody></table></div>
+<div class="ms"><div class="mt">Neurovaskulär status &ndash; ALLTID vid presentation</div><ul>
+<li>AIN (flexor pollicis longus, pronator quadratus) &ndash; vanligast skadad nerv<sup>[1]</sup></li>
+<li>Radialis och ulnaris kontrolleras<sup>[1]</sup></li>
+<li>Kapillär återfyllnad + pulsoximetri</li>
+<li><strong>Pulseless warm hand:</strong> reposition &ndash; normaliseras i ~90&nbsp;%<sup>[5]</sup></li>
+<li><strong>Pulseless cold hand:</strong> akut exploration a. brachialis</li>
+</ul></div>
+<div class="ms"><div class="mt">Trådkonfiguration</div><div class="tg">
+<div class="tb p"><h4>Laterala K-trådar &ndash; REKOMMENDERAS<sup>[1,2,3]</sup></h4><ul>
+<li>Lägre risk iatrogen ulnarisskada (RR=4.41 för kors)<sup>[3]</sup></li>
+<li>Jämförbar stabilitet Gartland II&ndash;III<sup>[1,2]</sup></li>
+<li>2&ndash;3 divergerande laterala trådar</li>
+</ul></div>
+<div class="tb s"><h4>Kors-K-trådar (medial+lateral)</h4><ul>
+<li>Marginellt bättre biomek. stabilitet<sup>[4]</sup></li>
+<li>Ulnarisskaderisk 4.1&nbsp;% vs 0.3&nbsp;%<sup>[2]</sup></li>
+<li>Mini-öppen teknik minskar nervrisk</li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb ea">Meta-analys av RCT (22 RCT)</span><span class="eb ea">Cochrane 2022</span></div><br>
+<p><strong>Zhao et al.<sup>[3]</sup></strong> (meta-analys RCT, 2021): Iatrogen ulnarisskada signifikant vanligare med kors-trådar (RR=4.41; 95&nbsp;% CI 1.97&ndash;9.86). Ingen skillnad funktionsresultat (Flynn-kriterier), stabilitet eller infektion.</p><br>
+<p><strong>Qin et al.<sup>[1]</sup></strong> (meta-analys, 7 RCT, n=521): Kors-pinning ger signifikant fler iatrogena ulnarisskador. Laterala trådar rekommenderas.</p><br>
+<p><strong>Dekker et al.<sup>[2]</sup></strong> (meta-analys, 13 studier, 1158 patienter): Jämförbar stabilitet. Ulnarisskada 4.1&nbsp;% vs 0.3&nbsp;%.</p><br>
+<p><strong>Yildiz et al.<sup>[4]</sup></strong> (meta-analys, 22 RCT, 1297 patienter): Kors-trådar minskade risk för reduction-loss (RR 0.70) men ökad ulnarisskada (RR 2.21).</p><br>
+<p><strong>Cochrane 2022<sup>[5]</sup></strong> (Marson et al.): Sammanfattar operativ behandling. Låg&ndash;måttlig evidenskvalitet för de flesta jämförelser.</p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Optimal timing för kirurgi (akut &lt;6 h vs elektiv &lt;12&ndash;24 h) ej väldefinierad i RCT för stabila frakturer. Hantering av "pink pulseless hand" post-reposition saknar prospektiva studier.</div></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Qin LH, et al. Is lateral pin fixation better than crossed pins for supracondylar fractures in children? Meta-analysis of 7 RCT (n=521). Clin Orthop Relat Res 2013;471(9):2942&ndash;2953.</li>
+<li>Dekker AE, Krijnen P, Schipper IB. Crossed vs lateral entry K-wire fixation pediatric supracondylar humeral fractures: systematic review and meta-analysis. Injury 2016;47(11):2391&ndash;2398.</li>
+<li>Zhao H, Xu S, Liu G, et al. Comparison lateral entry and crossed entry pinning: meta-analysis of RCTs. J Orthop Surg Res 2021;16:366.</li>
+<li>Yildiz C, et al. Medial&ndash;lateral vs lateral-only pinning: meta-analysis of RCTs (22 RCT, n=1297). J Orthop Surg Res 2023;18:56.</li>
+<li>Marson BA, Ikram A, Craxford S, et al. Interventions for treating supracondylar elbow fractures in children. Cochrane Database Syst Rev 2022;6:CD013609.</li>
+<li>Farrow L, Ablett AD, Mills L, Barker S. Early vs delayed surgery for paediatric supracondylar humeral fractures: systematic review and meta-analysis. Bone Joint J 2018;100-B(4):516&ndash;524.</li>
+</ol></div></div>`,
+
+avulsion:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Distal &ndash; Epikondyl &middot; Pediatrik</div><div class="pt">Medial epikondyl avulsionsfraktur (barn)</div><div class="ps">Ca 10&ndash;12&nbsp;% av pediatriska armbågsfrakturer. Vanligen 10&ndash;12 år. Associerad med armbågsluxation i 30&ndash;60&nbsp;%. SCIENCE-studien (Lancet 2026) ändrar praxis.</div></div>
+<div class="ms"><div class="mt">Bakgrund</div><p>Frakturen uppstår vid valgusbelastning (kastningsidrott, fall) eller i samband med armbågsluxation.<sup>[1]</sup> Tidigare varierade operationsfrekvensen kraftigt (2&ndash;15 mm som kirurgigräns) och ca hälften av alla barn opererades trots bristfälligt stöd.<sup>[2,3]</sup> SCIENCE-studien (Lancet 2026) är det första stora multicentre-RCT och har förändrat rekommendationerna fundamentalt.</p></div>
+<div class="ms"><div class="mt">Behandlingsprincip (efter SCIENCE 2026)</div><div class="tg">
+<div class="tb p"><h4>Konservativ &ndash; REKOMMENDERAS<sup>[1,2]</sup></h4><ul>
+<li>Gips 4 veckor<sup>[1]</sup></li>
+<li>Tidig rörlighet efter avgjipsning</li>
+<li>Gäller dislocerade frakturer utan inkarceration<sup>[1]</sup></li>
+<li>Inkl. frakturer vid armbågsluxation (reduktionsbar)<sup>[1]</sup></li>
+<li>Jämförbart utfall oavsett displacementgrad<sup>[1]</sup></li>
+</ul></div>
+<div class="tb c"><h4>Kirurgisk &ndash; snäva indikationer kvarstår</h4><ul>
+<li>Inkarcererat fragment i armbågsleden: akut ORIF<sup>[1,3]</sup></li>
+<li>Irreponibel armbågsluxation<sup>[1]</sup></li>
+<li>Öppen fraktur</li>
+<li>Elitidrottare kastningsidrott: individuell bedömning (ej RCT-stöd)<sup>[5]</sup></li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb ea">Nivå I &ndash; RCT (SCIENCE, Lancet 2026)</span><span class="eb ea">RCT (Finland, JAMA Netw Open 2025)</span></div><br>
+<p><strong>SCIENCE-studien<sup>[1]</sup></strong> (Perry et al., Lancet 2026; online 20 jan 2026): Multicentre RCT, 59 sjukhus i UK, Australien och Nya Zeeland. 334 barn 7&ndash;15 år randomiserades till kirurgi (n=168) eller gips 4 veckor (n=166), inklusive patienter med armbågsluxation. Primärt utfall PROMIS Upper Extremity vid 12 månader: 53.1 (gips) vs 54.3 (kirurgi) &ndash; ej signifikant (diff 1.57; 95&nbsp;% CI &minus;0.01 till 3.14). Kirurgi saknar överlägsenhet. Dessutom lägre kostnad och undvikande av operationsrisker i gipsgruppen.</p><br>
+<p><strong>Grahn et al.<sup>[2]</sup></strong> (finsk RCT, JAMA Network Open 2025, n=72): Gips ej sämre än kirurgi vid 12 månader. Begränsad power.</p><br>
+<p><strong>Knapik et al.<sup>[3]</sup></strong> (observationsstudie): Jämförbara utfall vid konservativ behandling med och utan armbågsluxation &ndash; stöder SCIENCE-studiens inkluderande approach.</p><br>
+<p><strong>Farsetti et al.<sup>[4]</sup></strong> (långtidsuppföljning, 34 år): Utmärkta konservativa resultat vid låg displacement &ndash; historiskt stöd för nuvarande rekommendation.</p>
+<div class="eg2"><strong>&#9888; Kvarstående evidensluckor</strong>Elitidrottare i kastningsidrott (baseball, spjutkastning) var ej specifikt studerade i SCIENCE. Långtidsdata (&gt;1 år) avseende UCL-stabilitet och idrottsåtergång saknas. Inkarcererat fragment var exklusionskriterie i SCIENCE &ndash; denna subgrupp stöds fortsatt av konsensus, ej RCT.</div></div>
+<div class="ms"><div class="mt">Uppföljning</div><ul>
+<li>Röntgen direkt + v. 1 (uteslut inkarceration)<sup>[1]</sup></li>
+<li>Avgjipsning v. 4, tidig aktiv rörlighet</li>
+<li>Sjukgymnastik vid kvarstående stelhet</li>
+<li>Idrottsåtergång när full rörlighet och styrka uppnåtts</li>
+</ul></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>Perry DC, Achten J, Zimmermann A, et al. (SCIENCE study). Surgical fixation vs non-surgical care for children with displaced medial epicondyle fracture: multicentre RCT. Lancet 2026. Online Jan 20. doi:10.1016/S0140-6736(25)02098-7.</li>
+<li>Grahn PHI, Hämäläinen T, Kivisaari R, et al. Casting vs surgical treatment of children with medial epicondyle fractures: randomized clinical trial. JAMA Netw Open 2025;8:e258479.</li>
+<li>Knapik DM, Fausett CL, Gilmore A, Liu RW. Outcomes of nonoperative pediatric medial humeral epicondyle fractures with and without elbow dislocation. J Pediatr Orthop 2017;37:e224&ndash;e228.</li>
+<li>Farsetti P, Potenza V, Caterini R, Ippolito E. Long-term results of treatment of fractures of medial humeral epicondyle in children. J Bone Joint Surg Am 2001;83(9):1299&ndash;1305.</li>
+<li>Patel NM, Ganley TJ. Medial epicondyle fractures: how to evaluate and when to operate. J Pediatr Orthop 2012;32 Suppl 1:S10&ndash;S13.</li>
+<li>Boutis K, et al. Commentary: The SCIENCE trial &ndash; surgery or not for medial epicondyle fractures. Lancet 2026; Jan 20. doi:10.1016/S0140-6736(26)00089-9.</li>
+</ol></div></div>`,
+
+pathological:`<div class="pp"><div class="ph"><div class="pc">Överarm &middot; Patologisk</div><div class="pt">Patologisk humerusfraktur</div><div class="ps">Fraktur i ben försvagat av skelettmetastas, myelom eller primärtumör. Humerus är näst vanligaste rörben för metastaser efter femur.</div></div>
+<div class="ms"><div class="mt">Vanliga primärtumörer</div><p>Bröst (vanligast), lunga, njure, prostata, sköldkörtel, myelom och okänd primärtumör.<sup>[4]</sup> Proximalt och mitt-diafysärt humerus drabbas i 84&nbsp;% av fallen.<sup>[4]</sup></p></div>
+<div class="ms"><div class="mt">Mirels-klassifikation (poäng 4&ndash;12)</div><table class="ct"><thead><tr><th>Variabel</th><th>1 poäng</th><th>2 poäng</th><th>3 poäng</th></tr></thead><tbody>
+<tr><td>Lokalisation</td><td>Övre extremitet</td><td>Nedre extremitet</td><td>Pertrokantärt</td></tr>
+<tr><td>Typ av lesion</td><td>Blastisk</td><td>Blandad</td><td>Lytisk</td></tr>
+<tr><td>Storlek</td><td>&lt;1/3 diameter</td><td>1/3&ndash;2/3</td><td>&gt;2/3 diameter</td></tr>
+<tr><td>Smärta</td><td>Mild</td><td>Måttlig</td><td>Funktionshindrande</td></tr></tbody></table>
+<br><p>Mirels &le;7: konservativ + strålbehandling. Mirels 8: individuell bedömning. Mirels &ge;9: profylaktisk stabilisering rekommenderas.<sup>[5]</sup></p></div>
+<div class="ms"><div class="mt">Behandling</div><div class="tg">
+<div class="tb c"><h4>Manifest fraktur &ndash; kirurgi</h4><ul>
+<li>IMN med cementering (diafysärt) &ndash; förstaval<sup>[1,2,3]</sup></li>
+<li>Endoprotes (proximal lokalisation, förväntad överlevnad &gt;3 mån)<sup>[4]</sup></li>
+<li>Plattosteosyntés med cement (alternativ)<sup>[6]</sup></li>
+<li>Preoperativ embolisering vid njure/sköldkörtel-metastas<sup>[6]</sup></li>
+<li>Postoperativ strålbehandling normalt inom 2&ndash;4 veckor</li>
+</ul></div>
+<div class="tb s"><h4>Adjuvant behandling</h4><ul>
+<li>Bisfosfonater / denosumab (onkolog)<sup>[6]</sup></li>
+<li>Radioterapi (smärta, lokalkontroll)</li>
+<li>Systemisk onkologisk behandling</li>
+</ul></div></div></div>
+<div class="ms"><div class="mt">Vetenskapligt underlag</div>
+<div class="er"><span class="eb eb2">Syst. översikt 23 studier</span><span class="eb eb2">Meta-analys IMN vs platta</span><span class="eb ec">Retrospektiva kohorter</span></div><br>
+<p><strong>van der Hulst et al.<sup>[1]</sup></strong> (systematisk översikt, Int Orthop 2015, 23 studier, 909 frakturer): IMN dominerande metod (596 fall). MSTS-score 64&ndash;79 efter IMN, 90 efter plattosteosyntés (1 studie). Komplikationsfrekvens hjälper kirurger informera patienter.</p><br>
+<p><strong>Griggers et al.<sup>[2]</sup></strong> (systematisk översikt, J Surg Oncol 2025): IMN vid impending/patologisk humerusfraktur &ndash; utvärderar tidiga komplikationer, implantatsvikt och funktionella utfall.</p><br>
+<p><strong>Tung et al.<sup>[3]</sup></strong> (meta-analys IMN vs platta, JCM 2024, 9 studier, 485 patienter): Ingen signifikant skillnad i implantatsvikt, lokal recidiv eller sårkomplikationer. IMN kortare operationstid.</p><br>
+<p><strong>Thai et al.<sup>[4]</sup></strong> (retrospektiv kohort, n=93): IMN med cementering som föredragen teknik, god funktionsåtergång postoperativt.</p><br>
+<p><strong>Mirels-validering<sup>[5]</sup></strong>: Validerat men begränsad specificitet för humerus &ndash; hög sensitivitet men överskattad frakturrisk vid låga poäng.</p>
+<div class="eg2"><strong>&#9888; Evidenslucka</strong>Inga RCT för patologisk humerusfraktur. Alla studier retrospektiva. Mirels-score specifikt för humerus ej välvaliderat. Optimal kirurgisk metod styrs av tumörtyp, lokalisation, förväntad överlevnad &ndash; ej RCT-baserat. Postoperativ strålbehandlingstiming saknar prospektiva studier.</div></div>
+<div class="rf"><div class="rt">Referenser</div><ol class="rl">
+<li>van der Hulst RR, et al. Outcome of operative treatment of metastatic fractures of the humerus: systematic review of 23 clinical studies (909 frakturer). Int Orthop 2015;39(3):507&ndash;514.</li>
+<li>Griggers, et al. Postoperative complications of intramedullary nailing for impending and pathologic fractures of the humerus: systematic review. J Surg Oncol 2025.</li>
+<li>Tung TH, Chen BK, et al. Intramedullary nail vs plate fixation for pathological humeral shaft fracture: updated narrative review and meta-analysis. J Clin Med 2024;13(3):755.</li>
+<li>Thai DM, Kitagawa Y, Choong PF. Outcome of surgical management of bony metastases to the humerus and shoulder girdle (n=93). Int Semin Surg Oncol 2006;3:5.</li>
+<li>Mirels H. Metastatic disease in long bones: proposed scoring system for diagnosing impending pathologic fractures. Clin Orthop Relat Res 1989;249:256&ndash;264.</li>
+<li>Willeumier JJ, van der Linden YM, van de Sande MAJ, Dijkstra PDSS. Treatment of pathological fractures of the long bones. EFORT Open Rev 2016;1(5):136&ndash;145.</li>
+</ol></div></div>`
+
+};
+function show(k){
+  document.getElementById('main').innerHTML=D[k]||'';
+  document.querySelectorAll('.fn button').forEach(b=>b.classList.remove('active'));
+  const b=document.getElementById('nav-'+k);
+  if(b)b.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
