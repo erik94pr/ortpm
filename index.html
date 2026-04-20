@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Överarm – PM för frakturer</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f2eb;
+      --panel: #fffef9;
+      --line: #d6cfc0;
+      --text: #1c1a18;
+      --muted: #6b6459;
+      --accent: #1a3a5c;
+      --accent-2: #2e7d52;
+      --soft: #eef4fa;
+      --warn: #fff8e1;
+      --warn-line: #e8a800;
+      --mono: 'IBM Plex Mono', monospace;
+      --serif: 'Libre Baskerville', serif;
+      --sans: 'Source Sans 3', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.68;
+      font-size: 15px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 100vh;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    aside {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      overflow-y: auto;
+      background: #f1ece2;
+      border-right: 1px solid var(--line);
+      padding: 24px 20px 40px;
+    }
+    aside h1 {
+      font-family: var(--serif);
+      font-size: 30px;
+      margin: 0 0 8px;
+      color: var(--accent);
+      line-height: 1.15;
+    }
+    aside p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .nav-group {
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-group-title {
+      display: block;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+    .subnav {
+      list-style: none;
+      padding: 0 0 0 10px;
+      margin: 0;
+    }
+    .subnav li { margin: 4px 0; }
+    .subnav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .subnav a:hover, .nav-group-title:hover { text-decoration: underline; }
+    main { padding: 32px; }
+    .intro, section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    h2 {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 30px;
+    }
+    h3 {
+      margin: 26px 0 10px;
+      color: var(--accent);
+      font-family: var(--mono);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      font-size: 12px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+    }
+    h4 {
+      margin: 18px 0 8px;
+      font-size: 16px;
+      color: #24384f;
+    }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 20px; }
+    li { margin: 6px 0; }
+    .evidence {
+      background: var(--soft);
+      border-left: 4px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .gap {
+      background: var(--warn);
+      border-left: 4px solid var(--warn-line);
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .refs {
+      background: #fbfcfe;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-top: 16px;
+    }
+    .refs ol {
+      margin: 8px 0 0 22px;
+      padding: 0;
+    }
+    .refs li { margin-bottom: 8px; }
+    .small { font-size: 13px; color: var(--muted); }
+    .toplink {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--accent);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .box {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #faf7f0;
+      padding: 14px 16px;
+    }
+    .box h4 {
+      margin-top: 0;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .inline-ref { color: var(--accent); font-weight: 600; }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside {
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+      main { padding: 18px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <h1>Överarm</h1>
+      <p>PM testversion i samma visuella upplägg som din mall. Vuxna patienter. RCT och metaanalyser prioriteras. Referenser markeras i löptexten och listas separat under varje frakturtyp.</p>
+
+      <div class="nav-group">
+        <a class="nav-group-title" href="#proximal">Proximala humerusfrakturer</a>
+        <ul class="subnav">
+          <li><a href="#proximal-bedomning">Bedömning</a></li>
+          <li><a href="#proximal-behandling">Behandling</a></li>
+          <li><a href="#proximal-evidens">Evidens och kunskapsluckor</a></li>
+          <li><a href="#proximal-referenser">Referenser</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-group">
+        <a class="nav-group-title" href="#gt">Tuberculum majus-fraktur</a>
+        <ul class="subnav">
+          <li><a href="#gt-bedomning">Bedömning</a></li>
+          <li><a href="#gt-behandling">Behandling</a></li>
+          <li><a href="#gt-evidens">Evidens och kunskapsluckor</a></li>
+          <li><a href="#gt-referenser">Referenser</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-group">
+        <a class="nav-group-title" href="#lt">Tuberculum minus-fraktur</a>
+        <ul class="subnav">
+          <li><a href="#lt-bedomning">Bedömning</a></li>
+          <li><a href="#lt-behandling">Behandling</a></li>
+          <li><a href="#lt-evidens">Evidens och kunskapsluckor</a></li>
+          <li><a href="#lt-referenser">Referenser</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-group">
+        <a class="nav-group-title" href="#shaft">Humerusskaftfraktur</a>
+        <ul class="subnav">
+          <li><a href="#shaft-bedomning">Bedömning</a></li>
+          <li><a href="#shaft-behandling">Behandling</a></li>
+          <li><a href="#shaft-evidens">Evidens och kunskapsluckor</a></li>
+          <li><a href="#shaft-referenser">Referenser</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-group">
+        <a class="nav-group-title" href="#distal">Distala humerusfrakturer</a>
+        <ul class="subnav">
+          <li><a href="#distal-bedomning">Bedömning</a></li>
+          <li><a href="#distal-behandling">Behandling</a></li>
+          <li><a href="#distal-evidens">Evidens och kunskapsluckor</a></li>
+          <li><a href="#distal-referenser">Referenser</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main>
+      <section class="intro" id="top">
+        <h2>PM – frakturer i överarmen</h2>
+        <p>Rekommendationerna nedan är skrivna som kliniskt arbetsunderlag. Primärt har randomiserade studier, systematiska översikter och metaanalyser från de senaste cirka 30 åren prioriterats. Där sådan evidens saknas anges detta uttryckligen i texten.</p>
+        <div class="evidence">
+          <strong>Metodprincip:</strong> RCT och metaanalyser väger tyngst. För sällsynta överarmsfrakturer, särskilt isolerade tuberositetsfrakturer, bygger rekommendationerna i högre grad på systematiska översikter, retrospektiva kohorter, fallserier och expertgenomgångar.
+        </div>
+      </section>
+
+      <section id="proximal">
+        <h2>Proximala humerusfrakturer</h2>
+
+        <h3 id="proximal-bedomning">Bedömning</h3>
+        <p>Proximala humerusfrakturer utgör en av de vanligaste fragilitetsfrakturerna hos äldre. Neer-klassifikationen används kliniskt, medan AO/OTA oftare används i studier. Högkvalitativ litteratur visar att många dislocerade 2-, 3- och utvalda 4-delsfrakturer hos äldre kan behandlas utan rutinmässig kirurgi utan sämre långtidsfunktion <span class="inline-ref">[1–4]</span>.</p>
+        <ul>
+          <li>Identifiera frakturdislokation, head-splitting, öppna skador och kärl-/nervpåverkan.</li>
+          <li>Bedöm biologisk ålder, funktionskrav, bentäthet och om frakturen är rekonstruerbar.</li>
+          <li>Hos yngre patienter med stor dislokation eller ledengagemang är tröskeln för kirurgi lägre <span class="inline-ref">[2,4,5]</span>.</li>
+        </ul>
+
+        <h3 id="proximal-behandling">Behandling</h3>
+        <div class="grid">
+          <div class="box">
+            <h4>Icke-operativ behandling</h4>
+            <ul>
+              <li>Slynga/mitella cirka 1–3 veckor beroende på smärta.</li>
+              <li>Tidig pendelträning och successivt assisterad rörelseträning.</li>
+              <li>Förstahandsval för majoriteten av odislocerade och många dislocerade frakturer hos äldre <span class="inline-ref">[1,3,4]</span>.</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h4>Operativ behandling</h4>
+            <ul>
+              <li>Överväg ORIF/IM-spik hos yngre och biologiskt starka patienter med rekonstruerbar fraktur.</li>
+              <li>Överväg reversprotes hos utvalda äldre med komplex 3–4-delsfraktur eller dålig tuberositets-/bensituation <span class="inline-ref">[4,5]</span>.</li>
+              <li>Absoluta indikationer: öppen fraktur, irreducibel luxationsfraktur, uttalad head-splitting, kärlhot.</li>
+            </ul>
+          </div>
+        </div>
+        <p>Tidig mobilisering efter icke-operativ behandling verkar vara säker och kan ge bättre korttidsfunktion jämfört med längre immobilisering <span class="inline-ref">[5]</span>.</p>
+
+        <h3 id="proximal-evidens">Evidens och kunskapsluckor</h3>
+        <div class="evidence">
+          PROFHER visade ingen kliniskt viktig skillnad mellan kirurgi och icke-kirurgi för majoriteten av dislocerade proximala humerusfrakturer hos vuxna vid två år <span class="inline-ref">[1]</span>. Cochrane-översikten och nyare översiktsartiklar stödjer samma huvudlinje: kirurgi ger inte någon säker generell långtidsvinst för flertalet äldre patienter, även om vissa subgrupper med mer komplex fraktur kan vara kandidater för operation <span class="inline-ref">[2–4]</span>.
+        </div>
+        <div class="gap">
+          <strong>Kunskapslucka:</strong> Det saknas fortfarande robusta jämförelser mellan låsplatta, märgspik, hemiartroplastik och reversprotes i tydligt definierade fraktursubgrupper. Det finns även begränsad RCT-evidens för optimalt rehabiliteringsprotokoll <span class="inline-ref">[4,5]</span>.
+        </div>
+
+        <div class="refs" id="proximal-referenser">
+          <strong>Referenser – proximala humerusfrakturer</strong>
+          <ol>
+            <li>Rangan A, Handoll H, Brealey S, et al. Surgical vs nonsurgical treatment of adults with displaced fractures of the proximal humerus: the PROFHER randomized clinical trial. JAMA. 2015.</li>
+            <li>Handoll HH, Brorson S. Interventions for treating proximal humeral fractures in adults. Cochrane Database Syst Rev. 2022.</li>
+            <li>Lapner P, et al. Management of proximal humeral fractures in adults: a scoping review / evidence review of randomized trials. 2023.</li>
+            <li>Baker HP, et al. Management of proximal humerus fractures in adults. EFORT Open Rev. 2022.</li>
+            <li>Challoumas D, et al. Early versus delayed mobilisation for non-surgically treated proximal humeral fractures: meta-analysis of randomized trials. 2025.</li>
+          </ol>
+        </div>
+        <a class="toplink" href="#top">Till toppen</a>
+      </section>
+
+      <section id="gt">
+        <h2>Tuberculum majus-fraktur</h2>
+
+        <h3 id="gt-bedomning">Bedömning</h3>
+        <p>Isolerad tuberculum majus-fraktur förekommer både som direktvåldsskada och tillsammans med främre axelluxation. Evidensunderlaget är betydligt svagare än för hela gruppen proximala humerusfrakturer. Den traditionella operationsgränsen på 5 mm används ofta, men har inte validerats väl i kliniska studier <span class="inline-ref">[1–3]</span>.</p>
+        <ul>
+          <li>Bedöm displacement i frontal- och outlet-/axillarprojektion eller CT vid osäkerhet.</li>
+          <li>Var särskilt observant vid samtidig luxation, där sekundär dislokation kan tillstöta trots initial god reposition <span class="inline-ref">[4,5]</span>.</li>
+          <li>Överväg MR/ultraljud vid misstanke om betydande rotatorkuffskada.</li>
+        </ul>
+
+        <h3 id="gt-behandling">Behandling</h3>
+        <div class="grid">
+          <div class="box">
+            <h4>Icke-operativ behandling</h4>
+            <ul>
+              <li>Rimligt förstahandsval vid liten dislokation och stabil ställning.</li>
+              <li>Slynga kortvarigt, följt av kontrollerad mobilisering.</li>
+              <li>Tät radiologisk kontroll om skadan uppstått i samband med luxation <span class="inline-ref">[2,4]</span>.</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h4>Operativ behandling</h4>
+            <ul>
+              <li>Överväg fixation vid tydlig superior/posterior dislokation, impingementrisk eller höga funktionskrav.</li>
+              <li>Hos kastidrottare och yngre kan lägre dislokationsgrad än 5 mm vara kliniskt relevant <span class="inline-ref">[1,2]</span>.</li>
+              <li>Fixation kan göras öppet eller artroskopiskt beroende på fragment och associerade skador.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 id="gt-evidens">Evidens och kunskapsluckor</h3>
+        <div class="evidence">
+          Systematiska översikter beskriver att resultaten generellt är goda både efter icke-operativ och operativ behandling, men datan är nästan helt baserad på observationsstudier. Nyare litteratur ifrågasätter en skarp 5 mm-regel som universell operationsgräns <span class="inline-ref">[1,2,3]</span>.
+        </div>
+        <div class="gap">
+          <strong>Kunskapslucka:</strong> Det saknas RCT och metaanalyser med jämförelse mellan operation och icke-operation för isolerade tuberculum majus-frakturer. Gränsen för kirurgi måste därför individualiseras utifrån displacement, patientkrav, associerad luxation och symtomgivande impingement <span class="inline-ref">[1–5]</span>.
+        </div>
+
+        <div class="refs" id="gt-referenser">
+          <strong>Referenser – tuberculum majus-fraktur</strong>
+          <ol>
+            <li>Levy DM, et al. Management of isolated greater tuberosity fractures: a systematic review. Am J Orthop / J Shoulder literature review. 2017.</li>
+            <li>Abildgaard M, et al. Treatment of isolated greater tuberosity fractures: scoping review. 2025/2026.</li>
+            <li>Ryan DJ, et al. The “5 mm rule” in greater tuberosity fractures of the proximal humerus. 2023.</li>
+            <li>Hébert-Davies J, et al. Delayed migration of greater tuberosity fractures associated with anterior shoulder dislocation. 2015.</li>
+            <li>Su F, et al. Management of greater tuberosity fracture-dislocations of the shoulder. J Am Acad Orthop Surg / review. 2023.</li>
+          </ol>
+        </div>
+        <a class="toplink" href="#top">Till toppen</a>
+      </section>
+
+      <section id="lt">
+        <h2>Tuberculum minus-fraktur</h2>
+
+        <h3 id="lt-bedomning">Bedömning</h3>
+        <p>Isolerad tuberculum minus-fraktur hos vuxna är sällsynt och nästan all publicerad litteratur består av fallrapporter, små serier och narrativa översikter <span class="inline-ref">[1–5]</span>. Skadan är viktig att identifiera eftersom fragmentet representerar subscapularisfästet och kan ge internrotationssvaghet, smärta och kvarstående dysfunktion.</p>
+        <ul>
+          <li>Misstänk skadan vid smärta framtill i axeln efter hyperabduktion/externalrotation eller posterior luxation.</li>
+          <li>CT eller MR behövs ofta för att bekräfta diagnos och bedöma subscapularis.</li>
+          <li>Bedöm samtidig bicepssenskada och glenohumeral instabilitet.</li>
+        </ul>
+
+        <h3 id="lt-behandling">Behandling</h3>
+        <div class="grid">
+          <div class="box">
+            <h4>Icke-operativ behandling</h4>
+            <ul>
+              <li>Kan övervägas vid minimalt dislocerat fragment och bevarad funktion.</li>
+              <li>Kort immobilisering följt av successiv mobilisering med viss försiktighet för internrotation tidigt.</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h4>Operativ behandling</h4>
+            <ul>
+              <li>Övervägs vid tydlig dislokation, subscapularisinsufficiens eller kvarstående smärta/funktionsnedsättning.</li>
+              <li>Fixation kan ske öppet eller artroskopiskt med skruv eller suture anchors <span class="inline-ref">[2–5]</span>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 id="lt-evidens">Evidens och kunskapsluckor</h3>
+        <div class="evidence">
+          Systematiska översikter visar överlag goda resultat efter kirurgisk fixation, men evidensen är låg eftersom nästan samtliga inkluderade studier är nivå IV. Någon tydlig dislokationsgräns för operation är inte etablerad <span class="inline-ref">[4,5]</span>.
+        </div>
+        <div class="gap">
+          <strong>Kunskapslucka:</strong> Det saknas RCT, metaanalyser av hög kvalitet och prospektiva jämförelser mellan icke-operativ och operativ behandling. Rekommendationerna måste därför tolkas försiktigt och individualiseras <span class="inline-ref">[1–5]</span>.
+        </div>
+
+        <div class="refs" id="lt-referenser">
+          <strong>Referenser – tuberculum minus-fraktur</strong>
+          <ol>
+            <li>Earwaker J. Isolated avulsion fracture of the lesser tuberosity of the humerus. 1990.</li>
+            <li>Dhawan A, et al. Isolated avulsion fracture of the lesser tuberosity of the humerus in an adult: case report and literature review. 2008.</li>
+            <li>Tosun B, et al. Isolated avulsion fracture of lesser tuberosity of the humerus. 2011.</li>
+            <li>Spek RWA, et al. Patient-reported outcomes, functional limitations and complications after lesser tuberosity fractures: systematic review. 2021.</li>
+            <li>Nikolaou VS, et al. Two-level reconstruction of isolated fracture of the lesser tuberosity of the humerus. 2014.</li>
+          </ol>
+        </div>
+        <a class="toplink" href="#top">Till toppen</a>
+      </section>
+
+      <section id="shaft">
+        <h2>Humerusskaftfraktur</h2>
+
+        <h3 id="shaft-bedomning">Bedömning</h3>
+        <p>Humerusskaftfrakturer kan behandlas både icke-operativt och operativt. Jämfört med proximal humerus är evidensen bättre, men fortfarande begränsad till ett fåtal randomiserade studier och flera metaanalyser. Viktiga utfall är läkning, sekundär kirurgi, funktion och radialisnervspåverkan <span class="inline-ref">[1–5]</span>.</p>
+        <ul>
+          <li>Dokumentera radialismotorik och sensorik före och efter eventuell reposition.</li>
+          <li>Bedöm om frakturen är enkel/stabil nog för brace eller om det finns skäl för primär kirurgi.</li>
+          <li>Relativa operationsskäl: polytrauma, bilateral fraktur, patologisk fraktur, svårställning, hög nonunionrisk, patientens funktionskrav.</li>
+        </ul>
+
+        <h3 id="shaft-behandling">Behandling</h3>
+        <div class="grid">
+          <div class="box">
+            <h4>Icke-operativ behandling</h4>
+            <ul>
+              <li>Initial slynga eller hanging cast följt av funktionell brace.</li>
+              <li>Fortsatt god metod för många slutna skaftfrakturer med acceptabel ställning.</li>
+              <li>Högre risk för nonunion och sekundär kirurgi än efter primär fixation <span class="inline-ref">[1,3,4]</span>.</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h4>Operativ behandling</h4>
+            <ul>
+              <li>Plattosteosyntes eller märgspik beroende på frakturmorfologi och kirurgisk strategi.</li>
+              <li>Nyare data talar för snabbare tidig funktion och högre unionsfrekvens efter kirurgi <span class="inline-ref">[1–4]</span>.</li>
+              <li>Radialispares efter sluten fraktur behandlas oftast expektant om ingen öppen skada/iatrogen skada föreligger <span class="inline-ref">[5]</span>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 id="shaft-evidens">Evidens och kunskapsluckor</h3>
+        <div class="evidence">
+          FISH-studien visade ingen kliniskt viktig funktionell skillnad mellan plattfixation och brace vid 12 månader, men crossover till kirurgi var vanlig i bracegruppen <span class="inline-ref">[1]</span>. Senare RCT-data och metaanalyser talar för att kirurgi minskar nonunion och sekundär kirurgi samt kan ge bättre tidig funktion, medan långtidsfunktion blir mer likartad <span class="inline-ref">[2–4]</span>.
+        </div>
+        <div class="gap">
+          <strong>Kunskapslucka:</strong> Det finns fortfarande begränsat antal RCT. Vilken patient som verkligen vinner på primär kirurgi är inte fullständigt klarlagt, och optimal handläggning av primär radialispåverkan bygger mest på systematiska översikter och kohorter snarare än RCT <span class="inline-ref">[5]</span>.
+        </div>
+
+        <div class="refs" id="shaft-referenser">
+          <strong>Referenser – humerusskaftfraktur</strong>
+          <ol>
+            <li>Rämö L, et al. Surgery vs functional bracing for closed humeral shaft fracture: the FISH randomized clinical trial. JAMA. 2020.</li>
+            <li>Oliver WM, et al. Operative vs nonoperative management of fractures of the humeral diaphysis: randomized clinical trial. JAMA Surg. 2025.</li>
+            <li>Oliver WM, et al. Systematic review and meta-analysis of randomized trials for humeral shaft fractures. 2023.</li>
+            <li>Van Bergen SH, et al. Humeral shaft fracture: systematic review of non-operative and operative treatment. 2023.</li>
+            <li>Ilyas AM, et al. Radial nerve palsy recovery with fractures of the humerus: systematic review. 2020.</li>
+          </ol>
+        </div>
+        <a class="toplink" href="#top">Till toppen</a>
+      </section>
+
+      <section id="distal">
+        <h2>Distala humerusfrakturer</h2>
+
+        <h3 id="distal-bedomning">Bedömning</h3>
+        <p>Distala humerusfrakturer är heterogena och omfattar extraartikulära och intraartikulära skador. Hos yngre är anatomisk rekonstruktion och stabil fixation huvudstrategi. Hos äldre med mycket komminuta intraartikulära frakturer finns randomiserat stöd för att total armbågsprotes kan vara ett bättre alternativ än ORIF i selekterade fall <span class="inline-ref">[1–3]</span>.</p>
+        <ul>
+          <li>CT rekommenderas ofta för operationsplanering.</li>
+          <li>Bedöm ulnarisnerv, hudstatus, öppen skada och benkvalitet.</li>
+          <li>Skilj mellan rekonstruerbar intraartikulär fraktur och fraktur där stabil fixation sannolikt inte kan uppnås.</li>
+        </ul>
+
+        <h3 id="distal-behandling">Behandling</h3>
+        <div class="grid">
+          <div class="box">
+            <h4>ORIF</h4>
+            <ul>
+              <li>Förstahandsval hos yngre och hos äldre där stabil fixation bedöms möjlig.</li>
+              <li>Parallell eller ortogonal dubbelplatta används; meta-analyser visar små skillnader men viss signal för bättre läkning med parallell plattning <span class="inline-ref">[4,5]</span>.</li>
+              <li>Tidig rörelseträning efter stabil fixation är viktig.</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h4>Total armbågsprotes (TEA)</h4>
+            <ul>
+              <li>Övervägs hos lågkrävande äldre med komplex, icke-rekonstruerbar intraartikulär distal humerusfraktur.</li>
+              <li>Kan ge bättre rörelseomfång och färre reoperationer än ORIF i denna subgrupp <span class="inline-ref">[1–3]</span>.</li>
+              <li>Livslånga restriktioner för tyngre belastning måste vägas in.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 id="distal-evidens">Evidens och kunskapsluckor</h3>
+        <div class="evidence">
+          McKee-studien är den mest centrala RCT:n och visade fördel för TEA framför ORIF hos äldre med komminuta intraartikulära frakturer som var svåra att fixera stabilt <span class="inline-ref">[1]</span>. Meta-analyser och systematiska översikter stödjer att TEA hos denna selekterade grupp kan minska komplikationer och reoperationer, men underlaget är fortfarande relativt litet <span class="inline-ref">[2,3]</span>.
+        </div>
+        <div class="gap">
+          <strong>Kunskapslucka:</strong> Det finns få randomiserade studier. För extraartikulära distala humerusfrakturer, optimalt implantatval, hantering av ulnarisnerven och rehabiliteringsprotokoll är evidensen huvudsakligen baserad på retrospektiva serier och systematiska översikter <span class="inline-ref">[3–5]</span>.
+        </div>
+
+        <div class="refs" id="distal-referenser">
+          <strong>Referenser – distala humerusfrakturer</strong>
+          <ol>
+            <li>McKee MD, et al. Open reduction-internal fixation versus total elbow arthroplasty for displaced intra-articular distal humeral fractures in elderly patients: multicenter randomized controlled trial. J Shoulder Elbow Surg. 2009.</li>
+            <li>Seok HG, et al. ORIF versus total elbow arthroplasty for distal humerus fractures in elderly patients: systematic review and meta-analysis. J Clin Med. 2022.</li>
+            <li>Stoddart MT, et al. Systematic review of the treatment of distal humerus fractures with total elbow arthroplasty. 2024.</li>
+            <li>Yu X, et al. Orthogonal versus parallel plating in distal humerus fracture: systematic review and meta-analysis. 2019.</li>
+            <li>Wang X, et al. Parallel versus perpendicular plating for distal humerus fractures: meta-analysis of randomized controlled trials. 2020.</li>
+          </ol>
+        </div>
+        <a class="toplink" href="#top">Till toppen</a>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
